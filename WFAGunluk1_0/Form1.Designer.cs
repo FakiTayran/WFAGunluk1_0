@@ -39,6 +39,8 @@
             this.btnSil = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.txtBaslik = new System.Windows.Forms.TextBox();
+            this.lstArananlar = new System.Windows.Forms.ListBox();
+            this.btnAramaİptal = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lstYazilarim
@@ -79,6 +81,7 @@
             this.rtxtNotAlani.Size = new System.Drawing.Size(433, 377);
             this.rtxtNotAlani.TabIndex = 3;
             this.rtxtNotAlani.Text = "";
+            this.rtxtNotAlani.TextChanged += new System.EventHandler(this.rtxtNotAlani_TextChanged);
             // 
             // btnEkle
             // 
@@ -124,6 +127,7 @@
             this.btnAra.TabIndex = 7;
             this.btnAra.Text = "ARA";
             this.btnAra.UseVisualStyleBackColor = false;
+            this.btnAra.Click += new System.EventHandler(this.btnAra_Click);
             // 
             // btnKaydet
             // 
@@ -136,6 +140,7 @@
             this.btnKaydet.TabIndex = 7;
             this.btnKaydet.Text = "KAYDET";
             this.btnKaydet.UseVisualStyleBackColor = false;
+            this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
             // 
             // btnSil
             // 
@@ -148,6 +153,7 @@
             this.btnSil.TabIndex = 7;
             this.btnSil.Text = "SİL";
             this.btnSil.UseVisualStyleBackColor = false;
+            this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
             // 
             // label3
             // 
@@ -174,6 +180,33 @@
             this.txtBaslik.TabIndex = 9;
             this.txtBaslik.Text = " ←Tıklayarak  Bir Günlük Oluşturun Ya Da Bir Günlük Seçin";
             this.txtBaslik.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtBaslik.TextChanged += new System.EventHandler(this.txtBaslik_TextChanged);
+            // 
+            // lstArananlar
+            // 
+            this.lstArananlar.BackColor = System.Drawing.SystemColors.Desktop;
+            this.lstArananlar.ForeColor = System.Drawing.SystemColors.Info;
+            this.lstArananlar.FormattingEnabled = true;
+            this.lstArananlar.ItemHeight = 20;
+            this.lstArananlar.Location = new System.Drawing.Point(20, 71);
+            this.lstArananlar.Name = "lstArananlar";
+            this.lstArananlar.Size = new System.Drawing.Size(274, 404);
+            this.lstArananlar.TabIndex = 10;
+            this.lstArananlar.Visible = false;
+            this.lstArananlar.SelectedIndexChanged += new System.EventHandler(this.lstArananlar_SelectedIndexChanged);
+            // 
+            // btnAramaİptal
+            // 
+            this.btnAramaİptal.BackColor = System.Drawing.SystemColors.Desktop;
+            this.btnAramaİptal.ForeColor = System.Drawing.SystemColors.Info;
+            this.btnAramaİptal.Location = new System.Drawing.Point(73, 543);
+            this.btnAramaİptal.Name = "btnAramaİptal";
+            this.btnAramaİptal.Size = new System.Drawing.Size(118, 33);
+            this.btnAramaİptal.TabIndex = 11;
+            this.btnAramaİptal.Text = "Aramaİptal";
+            this.btnAramaİptal.UseVisualStyleBackColor = false;
+            this.btnAramaİptal.Visible = false;
+            this.btnAramaİptal.Click += new System.EventHandler(this.btnAramaİptal_Click);
             // 
             // Form1
             // 
@@ -181,6 +214,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
             this.ClientSize = new System.Drawing.Size(778, 580);
+            this.Controls.Add(this.btnAramaİptal);
+            this.Controls.Add(this.lstArananlar);
             this.Controls.Add(this.txtBaslik);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnSil);
@@ -196,6 +231,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Form1";
             this.Text = "Gunluk 1.0";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -214,6 +250,8 @@
         private System.Windows.Forms.Button btnSil;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtBaslik;
+        private System.Windows.Forms.ListBox lstArananlar;
+        private System.Windows.Forms.Button btnAramaİptal;
     }
 }
 

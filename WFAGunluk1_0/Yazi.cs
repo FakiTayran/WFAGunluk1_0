@@ -12,5 +12,10 @@ namespace WFAGunluk1_0
         public string Baslik { get; set; }
         public string Icerik { get; set; }
 
+        public override string ToString()
+        {
+            return Baslik;
+        }
+
     }
 }
